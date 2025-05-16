@@ -12,3 +12,9 @@ sketch.forEach(sketch => {
         e.target.style.backgroundColor = "black";
     })
 })
+
+// Button click to ask canvas size
+const sizer = document.querySelector('button')
+sizer.addEventListener("click", () => {
+    const size = prompt("Enter number of squares per side:");
+})
