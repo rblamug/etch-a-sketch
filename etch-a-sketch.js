@@ -6,12 +6,29 @@ for (let i = 1; i <=256; i++) {
     container.appendChild(newDiv);
 }
 
-const sketch = document.querySelectorAll('.grid');
-sketch.forEach(sketch => {
-    sketch.addEventListener("mouseenter", (e) => {
-        e.target.style.backgroundColor = "black";
+function etch() {
+    const sketch = document.querySelectorAll('.grid');
+    sketch.forEach(sketch => {
+        sketch.addEventListener('mouseenter', (e) => {
+            const r = Math.floor(Math.random() * 256);
+            const g = Math.floor(Math.random() * 256);
+            const b = Math.floor(Math.random() * 256);
+            e.target.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+        })
     })
-})
+}
+
+etch();
+
+// const sketch = document.querySelectorAll('.grid');
+// sketch.forEach(sketch => {
+//     sketch.addEventListener("mouseenter", (e) => {
+//         const r = Math.floor(Math.random() * 256);
+//         const g = Math.floor(Math.random() * 256);
+//         const b = Math.floor(Math.random() * 256);
+//         e.target.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+//     })
+// })
 
 // Button click to ask canvas size
 const sizer = document.querySelector('button')
@@ -37,12 +54,7 @@ sizer.addEventListener("click", () => {
             container.appendChild(newDiv);
 
             //retrigger the eventlistener so the user can draw again
-            const sketch = document.querySelectorAll('.grid');
-            sketch.forEach(sketch => {
-            sketch.addEventListener("mouseenter", (e) => {
-            e.target.style.backgroundColor = "black";
-    })
-})
+            etch();
 
         };
     };
