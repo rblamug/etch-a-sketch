@@ -1,6 +1,6 @@
 #container {
-    width: 512px;
-    height: 512px;
+    width: 1024px;
+    height: 1024px;
     border: dotted 1px red;
     display: flex;
     flex-wrap: wrap;
@@ -8,8 +8,8 @@
 
 .grid {
     border: solid 1px black;
-    width: 32px;
-    height: 32px;
+    height: 64px;
+    width: 64px;
     box-sizing: border-box;
 }
 
